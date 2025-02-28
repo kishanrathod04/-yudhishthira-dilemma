@@ -23,7 +23,7 @@ export default function About() {
             // alt="Karna" 
             // className="w-24 h-24 rounded-full border-4 border-primary mr-6"
           />
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
             About Yudhhishthira's Dilemma
           </h1>
         </div>
