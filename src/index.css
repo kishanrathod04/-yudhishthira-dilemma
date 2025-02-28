@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@font-face {
+  font-family: 'Sanskrit';
+  src: url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+}
+
+body {
+  margin: 0;
+  font-family: 'Sanskrit', 'Cinzel', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a;
+  background-image: url('https://cdn.midjourney.com/ancient-dice-pattern/0_0.webp');
+  background-blend-mode: overlay;
+  background-size: 200px;
+  background-repeat: repeat;
+  color: #DAA520;
+}
+
+/* Ancient Scroll Effects */
+.ancient-scroll {
+  background: linear-gradient(to right, 
+    rgba(26, 26, 26, 0.9),
+    rgba(26, 26, 26, 0.7)
+  );
+  border: 2px solid #B8860B;
+  box-shadow: 0 0 15px rgba(184, 134, 11, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.ancient-scroll::before,
+.ancient-scroll::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url('https://cdn.midjourney.com/scroll-edge/0_0.webp') repeat-y;
+}
+
+.ancient-scroll::before {
+  left: -20px;
+}
+
+.ancient-scroll::after {
+  right: -20px;
+}
+
+/* Ancient Text Styles */
+.ancient-text {
+  font-family: 'Sanskrit', 'Cinzel', serif;
+  text-shadow: 2px 2px 4px rgba(184, 134, 11, 0.3);
+  letter-spacing: 1px;
+}
+
+.ancient-title {
+  font-family: 'Sanskrit', 'Cinzel', serif;
+  text-shadow: 3px 3px 6px rgba(218, 165, 32, 0.4);
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #B8860B, #DAA520);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Choice Cards */
+.choice-card {
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid #B8860B;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.choice-card:hover {
+  transform: translateY(-5px) rotateX(5deg);
+  border-color: #DAA520;
+  box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
+}
+
+/* Ancient Decorative Elements */
+.ancient-border {
+  border-image: url('https://cdn.midjourney.com/ancient-border/0_0.webp') 30 stretch;
+  border-width: 20px;
+  border-style: solid;
+}
+
+.ancient-divider {
+  height: 2px;
+  background: linear-gradient(to right, 
+    transparent,
+    #B8860B,
+    #DAA520,
+    #B8860B,
+    transparent
+  );
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ancient-scroll {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .ancient-title {
+    font-size: 1.8rem;
+  }
+  
+  .choice-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ancient-title {
+    font-size: 1.5rem;
+  }
+  
+  .ancient-text {
+    font-size: 0.9rem;
+  }
+}
